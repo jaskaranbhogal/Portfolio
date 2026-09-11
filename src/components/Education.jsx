@@ -68,7 +68,7 @@ function Education() {
                       <span className="font-semibold text-white">
                         GPA:
                       </span>{" "}
-                      3.9
+                      3.9 - President's List
                     </p>
                   </div>
 

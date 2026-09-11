@@ -56,15 +56,6 @@ function Contact() {
                 I'm always open to discussing software engineering opportunities,
                 collaborations, and interesting projects.
               </p>
-
-              <div className="mt-8 space-y-3 text-gray-300">
-                <p>
-                  Phone:{" "}
-                  <span className="text-white">
-                    516-344-9595
-                  </span>
-                </p>
-              </div>
             </div>
 
             {/* Contact Form */}

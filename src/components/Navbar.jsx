@@ -1,13 +1,61 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { FaBars, FaTimes } from "react-icons/fa"
 import logo from "../assets/jb-logo.png"
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const [activeSection, setActiveSection] = useState("top")
 
-  const closeMenu = () => {
-    setMenuOpen(false)
-  }
+  const navLinks = [
+    { label: "About", id: "about" },
+    { label: "Experience", id: "experience" },
+    { label: "Education", id: "education" },
+    { label: "Projects", id: "projects" },
+    { label: "Skills", id: "skills" },
+    { label: "Contact", id: "contact" },
+  ]
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + 180
+
+      let currentSection = "top"
+
+      for (const link of navLinks) {
+        const section = document.getElementById(link.id)
+
+        if (section && section.offsetTop <= scrollPosition) {
+          currentSection = link.id
+        }
+      }
+
+      // Make sure Contact activates when reaching the bottom
+      const nearBottom =
+        window.innerHeight + window.scrollY >=
+        document.documentElement.scrollHeight - 50
+
+      if (nearBottom) {
+        currentSection = "contact"
+      }
+
+      setActiveSection(currentSection)
+    }
+
+    handleScroll()
+
+    window.addEventListener("scroll", handleScroll)
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
+
+  const linkClass = (id) =>
+    `relative transition duration-300 ${
+      activeSection === id
+        ? "text-sky-400"
+        : "text-gray-400 hover:text-white"
+    }`
 
   return (
     <nav className="sticky top-0 z-50 border-b border-gray-900 bg-black/80 backdrop-blur-md">
@@ -28,43 +76,33 @@ function Navbar() {
           />
         </a>
 
-        {/* Desktop Links */}
-        <div className="flex items-center gap-8 text-gray-400">
-          <a href="#about" className="transition duration-300 hover:text-white">
-            About
-          </a>
+        {/* Navigation Links */}
+        <div className="flex items-center gap-8">
+          {navLinks.map((link) => (
+            <a
+              key={link.id}
+              href={`#${link.id}`}
+              className={linkClass(link.id)}
+            >
+              {link.label}
 
-          <a href="#experience" className="transition duration-300 hover:text-white">
-            Experience
-          </a>
-
-          <a href="#education" className="transition duration-300 hover:text-white">
-            Education
-          </a>
-
-          <a href="#projects" className="transition duration-300 hover:text-white">
-            Projects
-          </a>
-
-          <a href="#skills" className="transition duration-300 hover:text-white">
-            Skills
-          </a>
-
-          <a href="#contact" className="transition duration-300 hover:text-white">
-            Contact
-          </a>
+              {/* Active underline */}
+              {activeSection === link.id && (
+                <span className="absolute -bottom-2 left-0 h-[2px] w-full rounded-full bg-sky-400"></span>
+              )}
+            </a>
+          ))}
         </div>
       </div>
 
       {/* Mobile Navbar */}
-      <div className="flex items-center justify-between px-6 py-5 md:hidden">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:hidden">
 
-        {/* Mobile Logo */}
+        {/* Logo */}
         <a
           href="#top"
-          onClick={closeMenu}
           aria-label="Home"
-          className="transition duration-300 hover:scale-105"
+          onClick={() => setMenuOpen(false)}
         >
           <img
             src={logo}
@@ -75,10 +113,9 @@ function Navbar() {
 
         {/* Hamburger */}
         <button
-          onClick={() => setMenuOpen(!menuOpen)}
+          onClick={() => setMenuOpen((prev) => !prev)}
           aria-label="Toggle navigation menu"
-          aria-expanded={menuOpen}
-          className="text-2xl text-white transition hover:text-gray-400"
+          className="text-2xl text-white"
         >
           {menuOpen ? <FaTimes /> : <FaBars />}
         </button>
@@ -86,37 +123,23 @@ function Navbar() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="border-t border-gray-900 bg-black/95 px-6 py-8 backdrop-blur-md md:hidden">
-          <div className="flex flex-col items-center gap-7 text-lg text-gray-300">
+        <div className="border-t border-gray-900 bg-black/95 px-6 py-6 md:hidden">
+          <div className="flex flex-col items-center gap-6">
 
-            <a href="#about" onClick={closeMenu} className="transition hover:text-white">
-              About
-            </a>
-
-            <a href="#experience" onClick={closeMenu} className="transition hover:text-white">
-              Experience
-            </a>
-
-            <a href="#education" onClick={closeMenu} className="transition hover:text-white">
-              Education
-            </a>
-
-            <a href="#projects" onClick={closeMenu} className="transition hover:text-white">
-              Projects
-            </a>
-
-            <a href="#skills" onClick={closeMenu} className="transition hover:text-white">
-              Skills
-            </a>
-
-            <a href="#contact" onClick={closeMenu} className="transition hover:text-white">
-              Contact
-            </a>
+            {navLinks.map((link) => (
+              <a
+                key={link.id}
+                href={`#${link.id}`}
+                onClick={() => setMenuOpen(false)}
+                className={linkClass(link.id)}
+              >
+                {link.label}
+              </a>
+            ))}
 
           </div>
         </div>
       )}
-
     </nav>
   )
 }
