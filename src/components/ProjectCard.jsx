@@ -30,6 +30,18 @@ function ProjectCard({ project }) {
     setCurrentImage(index)
   }
 
+  const handleDragEnd = (_, info) => {
+    const swipeThreshold = 50
+
+    if (info.offset.x < -swipeThreshold) {
+      nextImage()
+    }
+
+    if (info.offset.x > swipeThreshold) {
+      previousImage()
+    }
+  }
+
   const imageVariants = {
     enter: (direction) => ({
       x: direction > 0 ? 120 : -120,
@@ -68,47 +80,59 @@ function ProjectCard({ project }) {
                 initial="enter"
                 animate="center"
                 exit="exit"
+
+                /* Swipe / Drag Support */
+                drag={project.images.length > 1 ? "x" : false}
+                dragConstraints={{
+                  left: 0,
+                  right: 0,
+                }}
+                dragElastic={0.2}
+                onDragEnd={handleDragEnd}
+                draggable={false}
+
                 transition={{
                   duration: 0.4,
                   ease: [0.22, 1, 0.36, 1],
                 }}
-                className="absolute inset-0 h-full w-full object-contain"
+
+                className="absolute inset-0 h-full w-full cursor-grab select-none object-contain active:cursor-grabbing"
               />
             </AnimatePresence>
 
             {/* Image Counter */}
-            <div className="absolute right-4 top-4 z-10 rounded-full bg-black/70 px-3 py-1 text-sm text-white">
+            <div className="absolute right-3 top-3 z-10 rounded-full bg-black/70 px-3 py-1 text-xs text-white md:right-4 md:top-4 md:text-sm">
               {currentImage + 1} / {project.images.length}
             </div>
 
             {project.images.length > 1 && (
               <>
-                {/* Previous */}
+                {/* Previous Button */}
                 <button
                   onClick={previousImage}
                   aria-label="Previous image"
-                  className="absolute left-4 z-10 flex h-11 w-11 items-center justify-center rounded-full border border-gray-600 bg-black/70 text-white transition duration-300 hover:scale-110 hover:bg-white hover:text-black"
+                  className="absolute left-3 z-10 flex h-9 w-9 items-center justify-center rounded-full border border-gray-600 bg-black/70 text-sm text-white transition duration-300 hover:scale-110 hover:bg-white hover:text-black md:left-4 md:h-11 md:w-11 md:text-base"
                 >
                   <FaChevronLeft />
                 </button>
 
-                {/* Next */}
+                {/* Next Button */}
                 <button
                   onClick={nextImage}
                   aria-label="Next image"
-                  className="absolute right-4 z-10 flex h-11 w-11 items-center justify-center rounded-full border border-gray-600 bg-black/70 text-white transition duration-300 hover:scale-110 hover:bg-white hover:text-black"
+                  className="absolute right-3 z-10 flex h-9 w-9 items-center justify-center rounded-full border border-gray-600 bg-black/70 text-sm text-white transition duration-300 hover:scale-110 hover:bg-white hover:text-black md:right-4 md:h-11 md:w-11 md:text-base"
                 >
                   <FaChevronRight />
                 </button>
 
-                {/* Dots */}
-                <div className="absolute bottom-4 z-10 flex gap-2">
+                {/* Navigation Dots */}
+                <div className="absolute bottom-3 z-10 flex gap-2 md:bottom-4">
                   {project.images.map((_, index) => (
                     <button
                       key={index}
                       onClick={() => selectImage(index)}
                       aria-label={`View image ${index + 1}`}
-                      className={`h-2.5 w-2.5 rounded-full transition duration-300 ${
+                      className={`h-2 w-2 rounded-full transition duration-300 md:h-2.5 md:w-2.5 ${
                         currentImage === index
                           ? "scale-125 bg-sky-400"
                           : "bg-gray-600 hover:bg-gray-400"
@@ -118,6 +142,7 @@ function ProjectCard({ project }) {
                 </div>
               </>
             )}
+
           </>
         ) : (
           <div className="text-center text-gray-500">
