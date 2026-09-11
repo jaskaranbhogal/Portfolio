@@ -51,8 +51,10 @@ function Hero() {
             </a>
 
             <a
-              href="mailto:bhogalj03@gmail.com"
-              aria-label="Email"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=bhogalj03@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Email Jaskaran Bhogal"
               className="flex h-12 w-12 items-center justify-center rounded-full border border-gray-700 text-2xl transition duration-300 hover:-translate-y-1 hover:border-white hover:bg-white hover:text-black"
             >
               <SiGmail />

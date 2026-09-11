@@ -4,19 +4,15 @@ function Experience() {
         <div className="mx-auto max-w-7xl">
   
           {/* Section Heading */}
-          <p className="mb-4 text-sm font-medium uppercase tracking-[0.3em] text-gray-400">
-            Experience & Education
-          </p>
-  
           <h2 className="text-4xl font-bold md:text-5xl">
-            Where I've worked and learned.
+            Experience
           </h2>
   
           {/* Timeline */}
           <div className="relative mt-16">
   
             {/* Vertical Line */}
-            <div className="absolute left-3 top-0 h-full w-px bg-gray-700 md:left-5"></div>
+            <div className="absolute left-3 top-0 h-full w-px bg-white md:left-5"></div>
   
             <div className="space-y-12">
   
