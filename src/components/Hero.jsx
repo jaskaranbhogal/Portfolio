@@ -63,7 +63,7 @@ function Hero() {
           {/* Resume Button */}
           <div className="mt-8">
             <a
-              href="/JaskaranBhogalResume.pdf"
+              href={`${import.meta.env.BASE_URL}JaskaranBhogalResume.pdf`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block rounded-lg border border-gray-700 px-6 py-3 font-semibold text-white transition duration-300 hover:-translate-y-1 hover:border-sky-400 hover:text-sky-400"
