@@ -1,3 +1,5 @@
+import ScrollReveal from "./ScrollReveal.jsx"
+
 import ProjectCard from "./ProjectCard.jsx"
 
 import receiptify1 from "../assets/projects/receiptify1.png"
@@ -107,11 +109,13 @@ function Projects() {
         </h2>
 
         <div className="mt-16 space-y-16">
-          {projects.map((project) => (
-            <ProjectCard
+          {projects.map((project, index) => (
+            <ScrollReveal
               key={project.title}
-              project={project}
-            />
+              delay={index*0.08}
+            >
+                <ProjectCard project={project} />
+            </ScrollReveal>
           ))}
         </div>
 

@@ -1,6 +1,9 @@
+import ScrollReveal from "./ScrollReveal"
+
 function About() {
     return (
       <section id="about" className="px-8 py-24">
+        <ScrollReveal>
         <div className="mx-auto max-w-7xl">
   
           <p className="mb-4 text-sm font-medium uppercase tracking-[0.3em] text-gray-400">
@@ -47,6 +50,7 @@ function About() {
   
           </div>
         </div>
+        </ScrollReveal>
       </section>
     )
   }

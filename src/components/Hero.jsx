@@ -6,7 +6,7 @@ function Hero() {
   return (
     <section
       id="top"
-      className="min-h-[90vh] px-8 flex items-center"
+      className="flex min-h-[90vh] items-center px-8"
     >
       <div className="mx-auto grid w-full max-w-7xl items-center gap-12 md:grid-cols-2">
 
@@ -29,7 +29,6 @@ function Hero() {
 
           {/* Social Links */}
           <div className="mt-8 flex gap-4">
-
             <a
               href="https://github.com/jaskaranbhogal"
               target="_blank"
@@ -59,16 +58,19 @@ function Hero() {
             >
               <SiGmail />
             </a>
-
           </div>
 
-          {/* Project Link */}
-          <a
-            href="#projects"
-            className="mt-10 inline-block text-gray-400 transition hover:text-white"
-          >
-            View my work ↓
-          </a>
+          {/* Resume Button */}
+          <div className="mt-8">
+            <a
+              href="/JaskaranBhogalResume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block rounded-lg border border-gray-700 px-6 py-3 font-semibold text-white transition duration-300 hover:-translate-y-1 hover:border-sky-400 hover:text-sky-400"
+            >
+              View My Resume
+            </a>
+          </div>
         </div>
 
         {/* Right Side */}
