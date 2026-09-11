@@ -12,34 +12,41 @@ function Navbar() {
 
       {/* Navigation Links */}
       <div className="flex gap-8 text-gray-400">
-        <a
-          href="#about"
-          className="transition duration-300 hover:text-white"
-        >
-          About
-        </a>
+  <a
+    href="#about"
+    className="transition duration-300 hover:text-white"
+  >
+    About
+  </a>
 
-        <a
-          href="#experience"
-          className="transition duration-300 hover:text-white"
-        >
-          Experience
-        </a>
+  <a
+    href="#experience"
+    className="transition duration-300 hover:text-white"
+  >
+    Experience
+  </a>
 
-        <a
-          href="#projects"
-          className="transition duration-300 hover:text-white"
-        >
-          Projects
-        </a>
+  <a
+    href="#education"
+    className="transition duration-300 hover:text-white"
+  >
+    Education
+  </a>
 
-        <a
-          href="#contact"
-          className="transition duration-300 hover:text-white"
-        >
-          Contact
-        </a>
-      </div>
+  <a
+    href="#projects"
+    className="transition duration-300 hover:text-white"
+  >
+    Projects
+  </a>
+
+  <a
+    href="#contact"
+    className="transition duration-300 hover:text-white"
+  >
+    Contact
+  </a>
+</div>
 
     </nav>
   )
