@@ -1,4 +1,6 @@
 import headshot from "../assets/headshot.jpeg"
+import { FaGithub, FaLinkedin } from "react-icons/fa"
+import { SiGmail } from "react-icons/si"
 
 function Hero() {
   return (
@@ -26,31 +28,36 @@ function Hero() {
           </p>
 
           {/* Social Links */}
-          <div className="mt-8 flex flex-wrap gap-4">
+          <div className="mt-8 flex gap-4">
+
             <a
               href="https://github.com/jaskaranbhogal"
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-lg bg-white px-6 py-3 font-medium text-black transition hover:bg-gray-300"
+              aria-label="GitHub"
+              className="flex h-12 w-12 items-center justify-center rounded-full border border-gray-700 text-2xl transition duration-300 hover:-translate-y-1 hover:border-white hover:bg-white hover:text-black"
             >
-              GitHub
+              <FaGithub />
             </a>
 
             <a
               href="https://www.linkedin.com/in/jaskaranbhogal/"
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-lg border border-gray-700 px-6 py-3 font-medium transition hover:border-white"
+              aria-label="LinkedIn"
+              className="flex h-12 w-12 items-center justify-center rounded-full border border-gray-700 text-2xl transition duration-300 hover:-translate-y-1 hover:border-white hover:bg-white hover:text-black"
             >
-              LinkedIn
+              <FaLinkedin />
             </a>
 
             <a
               href="mailto:bhogalj03@gmail.com"
-              className="rounded-lg border border-gray-700 px-6 py-3 font-medium transition hover:border-white"
+              aria-label="Email"
+              className="flex h-12 w-12 items-center justify-center rounded-full border border-gray-700 text-2xl transition duration-300 hover:-translate-y-1 hover:border-white hover:bg-white hover:text-black"
             >
-              Email
+              <SiGmail />
             </a>
+
           </div>
 
           {/* Project Link */}
@@ -65,6 +72,7 @@ function Hero() {
         {/* Right Side */}
         <div className="flex justify-center md:justify-end">
           <div className="relative">
+
             <div className="absolute -inset-4 rounded-3xl border border-gray-800"></div>
 
             <img
@@ -72,6 +80,7 @@ function Hero() {
               alt="Jaskaran Bhogal"
               className="relative h-[420px] w-[340px] rounded-3xl object-cover md:h-[500px] md:w-[400px]"
             />
+
           </div>
         </div>
 

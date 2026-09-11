@@ -6,6 +6,7 @@ import Education from "./components/Education.jsx"
 import Projects from "./components/Projects.jsx"
 import Skills from "./components/Skills.jsx"
 import Contact from "./components/Contact.jsx"
+import Footer from "./components/Footer.jsx"
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Projects />
       <Skills />
       <Contact />
+      <Footer />
     </div>
   )
 }
