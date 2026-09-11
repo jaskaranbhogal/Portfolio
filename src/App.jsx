@@ -7,19 +7,26 @@ import Projects from "./components/Projects.jsx"
 import Skills from "./components/Skills.jsx"
 import Contact from "./components/Contact.jsx"
 import Footer from "./components/Footer.jsx"
+import ParticleBackground from "./components/ParticleBackground.jsx"
 
 function App() {
   return (
-    <div className="min-h-screen bg-black text-white">
-      <Navbar />
-      <Hero />
-      <About />
-      <Experience />
-      <Education />
-      <Projects />
-      <Skills />
-      <Contact />
-      <Footer />
+    <div className="relative min-h-screen bg-black text-white">
+
+      <ParticleBackground />
+
+      <div className="relative z-10">
+        <Navbar />
+        <Hero />
+        <About />
+        <Experience />
+        <Education />
+        <Projects />
+        <Skills />
+        <Contact />
+        <Footer />
+      </div>
+
     </div>
   )
 }
