@@ -94,8 +94,8 @@ function ParticleBackground() {
 
       const particleCount =
         window.innerWidth < 768
-          ? 35
-          : Math.min(Math.floor(window.innerWidth / 18), 90)
+          ? 45
+          : Math.min(Math.floor(window.innerWidth / 14), 115)
 
       for (let i = 0; i < particleCount; i++) {
         particles.push(new Particle())

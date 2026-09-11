@@ -74,7 +74,7 @@ function Contact() {
                 type="text"
                 required
                 className="w-full rounded-lg border border-gray-700 bg-black px-4 py-3 text-white outline-none transition focus:border-white"
-                placeholder="Your name"
+                placeholder="Your full name"
               />
             </div>
 
