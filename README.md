@@ -1,16 +1,83 @@
-# React + Vite
+# Jaskaran Bhogal - Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio website showcasing my experience, projects, technical skills, and education as a Computer Science student and aspiring Software Engineer.
 
-Currently, two official plugins are available:
+## Live Website
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- [Vercel Deployment](https://portfolio-fdqd29cub-jaskaranbhogals-projects.vercel.app/)
+- [GitHub Pages](https://jaskaranbhogal.github.io/Portfolio/)
 
-## React Compiler
+## About
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+I am a Computer Science student at Farmingdale State College with experience building full-stack and web applications, working with APIs and databases, and leading engineering teams.
 
-## Expanding the ESLint configuration
+My development experience includes Java, Python, C++, JavaScript, React, SQL, MongoDB, and other modern web technologies. I am interested in software engineering opportunities where I can continue building practical, user-focused applications and strengthen my skills as a developer.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+
+- React
+- Vite
+- Tailwind CSS
+- Framer Motion
+- React Icons
+- JavaScript
+- HTML/CSS
+
+## Features
+
+- Responsive design for desktop and mobile
+- Interactive particle background
+- Scroll-triggered animations and transitions
+- Active navigation highlighting
+- Education and experience timelines
+- Interactive project screenshot carousels
+- Swipeable project galleries on mobile
+- Technical skills section
+- Working contact form
+- GitHub, LinkedIn, and email integration
+- Viewable resume
+- SEO and social-sharing meta tags
+
+## Running Locally
+
+Clone the repository:
+
+```bash
+git clone https://github.com/jaskaranbhogal/Portfolio.git
+```
+
+Navigate into the project:
+
+```bash
+cd Portfolio
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+## Deployment
+
+The portfolio is automatically deployed from the `main` branch using:
+
+- Vercel
+- GitHub Pages with GitHub Actions
+
+## Contact
+
+- LinkedIn: https://www.linkedin.com/in/jaskaranbhogal
+- GitHub: https://github.com/jaskaranbhogal
+- Email: bhogalj03@gmail.com
+
+## Author
+
+Jaskaran S. Bhogal  
+Computer Science Student | Aspiring Software Engineer
