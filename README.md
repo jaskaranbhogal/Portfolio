@@ -4,7 +4,7 @@ Personal portfolio website showcasing my experience, projects, technical skills,
 
 ## Live Website
 
-- [Vercel Deployment](https://portfolio-fdqd29cub-jaskaranbhogals-projects.vercel.app/)
+- [Vercel Deployment](https://portfolio-rose-ten-rwx1rwvj8s.vercel.app/)
 - [GitHub Pages](https://jaskaranbhogal.github.io/Portfolio/)
 
 ## About
