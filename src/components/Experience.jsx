@@ -63,8 +63,10 @@ function Experience() {
                       <span className="text-sky-400">•</span>
 
                       <span>
-                        Led a cross-functional Agile Scrum team of 4 engineers
-                        and 3 product members throughout the development process.
+                        Led a 7-member cross-functional Agile Scrum team of 4 engineers and 3 product
+                        team members, facilitating sprint planning, daily standups, and retrospectives
+                        while maintaining 90%+ sprint task completion and supporting timely project
+                        delivery.
                       </span>
                     </li>
 
@@ -72,8 +74,10 @@ function Experience() {
                       <span className="text-sky-400">•</span>
 
                       <span>
-                        Developed an interactive insurance calculator using
-                        HTML, CSS, JavaScript, and PHP.
+                        Developed an interactive insurance calculator using HTML/CSS, JavaScript, and
+                        PHP that analyzed 9 user factors to generate personalized premium estimates and
+                        coverage options, reducing estimate generation time from approximately 5 minutes
+                        to under 30 seconds.
                       </span>
                     </li>
 
@@ -81,8 +85,10 @@ function Experience() {
                       <span className="text-sky-400">•</span>
 
                       <span>
-                        Helped create a user-focused experience that provided
-                        personalized financial guidance based on customer input.
+                        Implemented a goal-oriented user journey that analyzed 5+ customer inputs to
+                        automatically generate 3 personalized coverage tiers, custom coverage estimates,
+                        and actionable recommendations for reducing insurance costs and improving
+                        financial decision-making.
                       </span>
                     </li>
 
@@ -133,8 +139,9 @@ function Experience() {
                       <span className="text-sky-400">•</span>
 
                       <span>
-                        Led a 10-member robotics team across software,
-                        mechanical, electrical, and pneumatic systems.
+                        Led a team of 10 student engineers across software, mechanical, electrical, and
+                        pneumatics disciplines, overseeing project coordination, task delegation, and
+                        team development.
                       </span>
                     </li>
 
@@ -142,8 +149,9 @@ function Experience() {
                       <span className="text-sky-400">•</span>
 
                       <span>
-                        Developed robotics software using Java and LabVIEW,
-                        increasing robot movement speed by 200%.
+                        Engineered a pneumatics-driven crane/claw mechanism by programming the robot in
+                        Java and LabVIEW, optimizing motor control logic and wiring to achieve a 200%
+                        increase in robot movement speed.
                       </span>
                     </li>
 
@@ -151,8 +159,9 @@ function Experience() {
                       <span className="text-sky-400">•</span>
 
                       <span>
-                        Designed a timing algorithm that reduced battery
-                        consumption by 47%.
+                        Developed a custom timing algorithm for the pneumatics system load-up sequence,
+                        reducing battery consumption by 47% and extending operational runtime during
+                        competition.
                       </span>
                     </li>
 
@@ -160,8 +169,8 @@ function Experience() {
                       <span className="text-sky-400">•</span>
 
                       <span>
-                        Mentored team members and helped coordinate software
-                        development with the rest of the engineering team.
+                        Mentored the incoming student team on robot programming architecture, codebase
+                        structure, and best practices to support continuity and efficient onboarding.
                       </span>
                     </li>
 
